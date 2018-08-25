@@ -1,7 +1,7 @@
 
 ## React-Doctors
 
-Deployed app on Heroku [here](https://.com/).
+Deployed app on Heroku [here](https://peaceful-lowlands-10857.herokuapp.com/).
 
 # Project Description:
 
