@@ -1,0 +1,18 @@
+.card {
+    background-color: #fbf1dd;
+    
+}
+
+.card:hover {
+	cursor: pointer;
+}
+.cardTitle{
+  color: #b61c1c;
+  font-size: 1.3em;
+  
+  
+}
+.cardDiv {
+  margin: 20px auto;
+  color: #1567b9;
+}
