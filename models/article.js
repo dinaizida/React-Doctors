@@ -4,53 +4,48 @@ const Schema = mongoose.Schema;
 const articleSchema = new Schema({
     title: {
         type: String,
-        unique: true,
+        unique: false,
         required: true
     },
     specialties: {
        type: String,
-       unique: true,
+       unique: false,
        required: false
     },
     practiceaddresss1: {
         type: String,
-        unique: true,
+        unique: false,
        required: false
     },
     practiceaddresss2: {
         type: String,
-        unique: true,
+        unique: false,
        required: false
     },
     practiceaddresss3: {
         type: String,
-        unique: true,
+        unique: false,
        required: false
     },
     practiceaddresss4: {
         type: String,
-        unique: true,
+        unique: false,
        required: false
     },
     practiceaddresss5: {
         type: String,
-        unique: true,
+        unique: false,
        required: false
     },
     phone: {
         type: String,
-        unique: true,
+        unique: false,
         required: false
     },
     imageurl: {
         type: String,
-        unique: true,
+        unique: false,
         required: false
-    },
-    saved: {
-        type: Boolean,
-        default: false,
-        required: true
     }
 });
 
