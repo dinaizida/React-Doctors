@@ -3,13 +3,13 @@ import axios from "axios";
 import API from "../../utils/API";
 import Card from "../Card";
 import SearchForm from "../SearchForm";
-import Article from "../Article";
+import Doctor from "../Doctor";
 import "./Search.css";
 
 class Search extends Component {
     // sets the initial values
     state = {
-        articles: [],
+        doctors: [],
         topic: "",
         // user_address: "",
         // doctor_state: ""
@@ -35,7 +35,7 @@ class Search extends Component {
             />
         )
     }
-
+   
     // handles the submission of the form
     handleFormSubmit = event => {
         event.preventDefault();
@@ -72,7 +72,7 @@ class Search extends Component {
               //console.log(doctorsRes.data.data[0].profile.bio);
 
               console.log(doctorsRes.data.data);
-              this.setState({ articles: doctorsRes.data.data, topic: ""});
+              this.setState({ doctors: doctorsRes.data.data, topic: ""});
           
           })
 
@@ -85,38 +85,36 @@ class Search extends Component {
     // displays search results
     searchResults = () => {
         return (
-            <div className="article-grid row">
-                {this.state.articles.map(article => (
-                    <Article
-                        key={article.uid}
-                        articleId={article.uid}
-                        articleTitle={article.practices[0].name}
+            <div className="doctor-grid row">
+                {this.state.doctors.map(doctor => (
+                    <Doctor
+                        key={doctor.uid}
+                        doctorId={doctor.uid}
+                        doctorTitle={doctor.practices[0].name}
 
-                        drSpecialties={article.specialties[0].description}
+                        drSpecialties={doctor.specialties[0].description}
 
-                        drPracticeAddresss1={article.practices[0].visit_address.street}
-                        drPracticeAddresss2={article.practices[0].visit_address.street2}
-                        drPracticeAddresss3={article.practices[0].visit_address.city}
-                        drPracticeAddresss4={article.practices[0].visit_address.state}
-                        drPracticeAddresss5={article.practices[0].visit_address.zip}
+                        drPracticeAddresss1={doctor.practices[0].visit_address.street}
+                        drPracticeAddresss2={doctor.practices[0].visit_address.street2}
+                        drPracticeAddresss3={doctor.practices[0].visit_address.city}
+                        drPracticeAddresss4={doctor.practices[0].visit_address.state}
+                        drPracticeAddresss5={doctor.practices[0].visit_address.zip}
 
-                        drPhone={article.practices[0].phones[0].number}
-                        drImageURL={article.profile.image_url}
+                        drPhone={doctor.practices[0].phones[0].number}
+                        drImageURL={doctor.profile.image_url}
                     
-                        saveArticle={this.saveArticle}
+                        saveDoctor={this.saveDoctor}
                     />
                 ))}
             </div>
         )
     }
 
-    // saves an article
-    saveArticle = (title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl) => {
-       // console.log(title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl);
-        API.saveArticle({
+    // saves  a doctor 
+    saveDoctor = (title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl) => {
+    console.log(title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl);
+        API.saveDoctor({
             title: title,
-            // date: date,
-            // url: url,
             specialties: specialties,
             practiceaddresss1: practiceaddresss1,
             practiceaddresss2: practiceaddresss2,
@@ -129,6 +127,8 @@ class Search extends Component {
         })
         .then(res => console.log(title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl))
         .catch(err => console.log(err))
+        alert ( "doctor informaiton saved");
+        
     };
 
     render() {
@@ -136,8 +136,9 @@ class Search extends Component {
             <div  >
                 <Card cardTitle="Search for Doctors" cardContent={this.searchForm()}
                 />
+               
                 <div className ="cardDiv col s12 m10">
-                { this.state.articles.length ? <Card cardTitle="Search Results" cardContent={this.searchResults()} /> : "" }
+                { this.state.doctors.length ? <Card cardTitle="Search Results" cardContent={this.searchResults()} /> : "" }
                 </div>
             </div>
         );

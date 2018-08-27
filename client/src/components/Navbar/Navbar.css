@@ -27,7 +27,8 @@ a:hover {
       font-size: 0.5em;
     }
     .logo-image{
-        visibility: hidden;
+       width: 30px;
+       height: auto;
     }
     .menuBtn{
         margin: 0px;

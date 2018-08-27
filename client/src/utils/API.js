@@ -1,24 +1,27 @@
 import axios from "axios";
+import { DocumentProvider } from "mongoose";
 
 export default {
-    // gets all articles
-    getArticles: function() {
-        return axios.get("/api/articles");
+    // gets all doctors
+    getDoctors: function() {
+        return axios.get("/api/doctors");
     },
     // gets an article by id
-    getArticle: function(id) {
-        return axios.get("/api/articles/" + id);
+    getDoctor: function(id) {
+        return axios.get("/api/doctors/" + id);
     },
-    // deletes the article with the given id
-    deleteArticle: function(id) {
-        return axios.delete("/api/articles/" + id);
+    // deletes the Doctor with the given id
+    deleteDoctor: function(id) {
+        return axios.delete("/api/doctors/" + id);
     },
-    // saves an article to the database
-    saveArticle: function(articleData) {
-        return axios.post("/api/articles", articleData);
+    // saves an Doctor to the database
+    saveDoctor: function(doctorData) {
+        return axios.post("/api/doctors", doctorData);
     },
-    // updates an article to the database
-    updateArticle: function(articleData) {
-        return axios.put("/api/articles", articleData);
+    // updates an Doctor to the database
+    updateDoctor: function(doctorData) {
+        return axios.put("/api/doctors", doctorData);
     }
 };
+
+ 

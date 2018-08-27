@@ -1,64 +1,64 @@
 import React, { Component }from "react";
 import API from "../../utils/API";
 import Card from "../Card";
-import Article from "../Article";
+import Doctor from "../Doctor";
 import "./Saved.css";
 
 class Saved extends Component {
     // sets the initial values
     state = {
-        articles: []
+        doctors: []
     };
 
-    // loads articles
+    // loads doctors
     componentDidMount() {
-        this.loadArticles();
+        this.loadDoctors();
     }
 
-    // loads saved articles
-    loadArticles = () => {
-        API.getArticles()
-        .then(res => this.setState({ articles: res.data }))
+    // loads saved doctors
+    loadDoctors = () => {
+        API.getDoctors()
+        .then(res => this.setState({ doctors: res.data }))
         .catch(err => console.log(err));
     };
 
     // displays search results
-    savedArticles = () => {
+    savedDoctors = () => {
         return (
-            <div className="article-grid row">
-                {this.state.articles.map(article => (
-                    <Article
-                        key={article._id}
-                        articleId={article._id}
-                        articleTitle={article.title}
+            <div className="doctor-grid row">
+                {this.state.doctors.map(doctor => (
+                    <Doctor
+                        key={doctor._id}
+                        doctorId={doctor._id}
+                        doctorTitle={doctor.title}
     
-                        drSpecialties={article.specialties}
-                        drPracticeAddresss1={article.practiceaddresss1}
-                        drPracticeAddresss2={article.practiceaddresss2}
-                        drPracticeAddresss3={article.practiceaddresss3}
-                        drPracticeAddresss4={article.practiceaddresss4}
-                        drPracticeAddresss5={article.practiceaddresss5}
-                        drPhone={article.phone}
-                        drImageURL={article.imageurl}
+                        drSpecialties={doctor.specialties}
+                        drPracticeAddresss1={doctor.practiceaddresss1}
+                        drPracticeAddresss2={doctor.practiceaddresss2}
+                        drPracticeAddresss3={doctor.practiceaddresss3}
+                        drPracticeAddresss4={doctor.practiceaddresss4}
+                        drPracticeAddresss5={doctor.practiceaddresss5}
+                        drPhone={doctor.phone}
+                        drImageURL={doctor.imageurl}
 
-                        deleteArticle={this.deleteArticle}
+                        deleteDoctor={this.deleteDoctor}
                     />
                 ))}
             </div>
         )
     };
 
-    // deletes an article
-    deleteArticle = id => {
-        API.deleteArticle(id)
-        .then(res => this.loadArticles())
+    // deletes an Doctor
+    deleteDoctor = id => {
+        API.deleteDoctor(id)
+        .then(res => this.loadDoctors())
         .catch(err => console.log(err));
     };
 
     render() {
         return (
             <div>
-                { this.state.articles.length ? <Card shadow={false} cardTitle="Saved Doctors" cardContent={this.savedArticles()} /> : <Card cardTitle="No saved doctors to display" /> }
+                { this.state.doctors.length ? <Card shadow={false} cardTitle="Saved Doctors" cardContent={this.savedDoctors()} /> : <Card cardTitle="No saved doctors to display" /> }
             </div>
         );
     };

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Article.css";
+import "./Doctor.css";
 
-const Article = props => (
+const Doctor = props => (
 
- <div id={props.articleId} className="card">
+ <div id={props.doctorId} className="card">
     <div className="col s12 l6 m6 card-image waves-effect waves-block waves-light">
       <img id = "drImg" src={props.drImageURL} />
       
@@ -13,13 +13,13 @@ const Article = props => (
                  {/* <span >{props.drSpecialties}</span> */}
                  </div>
     <div className="card-content">
-      <span className="card-title activator grey-text text-darken-4">{props.articleTitle}<i className="material-icons right">more_vert</i></span>
+      <span className="card-title activator grey-text text-darken-4">{props.doctorTitle}<i className="material-icons right">more_vert</i></span>
           
       <div className="card-action">
-                {props.saveArticle ?  <Link to="#" className="btn-unsave waves-effect waves-light btn btn-large pulse   blue lighten-4" onClick={() => props.saveArticle(props.articleTitle, props.drSpecialties, props.drPracticeAddresss1, props.drPracticeAddresss2, props.drPracticeAddresss3, props.drPracticeAddresss4, props.drPracticeAddresss5, props.drPhone, props.drImageURL)}> <i className="material-icons tiny">bookmark</i> Save Doctor</Link> : null}
+                {props.saveDoctor ?  <Link to="#" className="btn-unsave waves-effect waves-light btn btn-large pulse   blue lighten-4" onClick={() => props.saveDoctor(props.doctorTitle, props.drSpecialties, props.drPracticeAddresss1, props.drPracticeAddresss2, props.drPracticeAddresss3, props.drPracticeAddresss4, props.drPracticeAddresss5, props.drPhone, props.drImageURL)}> <i className="material-icons tiny">bookmark</i> Save Doctor</Link> : null}
 
 
-                {props.deleteArticle ?  <Link to="#" className="btn-unsave waves-effect waves-light btn btn-large pulse   blue lighten-4" onClick={() => props.deleteArticle(props.articleId)}> Delete Doctor</Link> : null}
+                {props.deleteDoctor ?  <Link to="#" className="btn-unsave waves-effect waves-light btn btn-large pulse   blue lighten-4" onClick={() => props.deleteDoctor(props.doctorId)}> Delete Doctor</Link> : null}
             </div>
      
     </div>
@@ -42,4 +42,4 @@ const Article = props => (
   </div>
 
 );
-export default Article;
+export default Doctor;
