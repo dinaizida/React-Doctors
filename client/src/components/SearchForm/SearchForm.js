@@ -3,6 +3,7 @@ import React from "react";
 const SearchForm = props => (
     <form>
         <div className="row ">
+        
             <div className="input-field col m10 s10 ">
                 <input id="topic" name="topic" type="text"   value={props.topic} onChange={props.handleInputChange} required />
                 <label htmlFor="topic">Medical Issue</label>

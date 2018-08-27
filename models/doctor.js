@@ -46,6 +46,9 @@ const doctorSchema = new Schema({
         type: String,
         unique: false,
         required: false
+    },
+    saved:{
+        type: String
     }
 });
 

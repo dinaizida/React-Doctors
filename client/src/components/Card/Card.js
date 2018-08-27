@@ -6,6 +6,7 @@ const Card = props => (
         <div className="card-content card hoverable ">
             <span className="card-title cardTitle">{props.cardTitle}</span>
             {props.cardContent}
+            
         </div>
     </div>
 )

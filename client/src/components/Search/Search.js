@@ -4,6 +4,7 @@ import API from "../../utils/API";
 import Card from "../Card";
 import SearchForm from "../SearchForm";
 import Doctor from "../Doctor";
+import Message from "../Message";
 import "./Search.css";
 
 class Search extends Component {
@@ -11,9 +12,10 @@ class Search extends Component {
     state = {
         doctors: [],
         topic: "",
-        // user_address: "",
-        // doctor_state: ""
+        info: 'click on "search" button to find a doctor',
+        
     };
+    
 
     // handles any changes to the input fields
     handleInputChange = event => {
@@ -28,8 +30,7 @@ class Search extends Component {
         return (
             <SearchForm
                 topic={this.state.topic}
-                // userAddress={this.state.user_address}
-                // doctorState={this.state.doctor_state}
+                
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
             />
@@ -42,10 +43,6 @@ class Search extends Component {
 
         // form fields
         const topic = this.state.topic;
-        // let userAddress = this.state.user_address;
-        // let doctorState = this.state.doctor_state;
-        // let userTempAdress = "37.773-122.413";
-
 
         // API URL
         //const apiKey = "932c328bab1a81634332edee178f5544";
@@ -111,8 +108,8 @@ class Search extends Component {
     }
 
     // saves  a doctor 
-    saveDoctor = (title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl) => {
-    console.log(title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl);
+    saveDoctor = (title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl, saved) => {
+    console.log(title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl, saved);
         API.saveDoctor({
             title: title,
             specialties: specialties,
@@ -123,24 +120,27 @@ class Search extends Component {
             practiceaddresss5: practiceaddresss5,
             phone:phone,
             imageurl: imageurl,
-            saved: true
+            saved: "Doctor saved"
         })
-        .then(res => console.log(title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl))
+        .then(res => console.log(title, specialties, practiceaddresss1, practiceaddresss2, practiceaddresss3, practiceaddresss4, practiceaddresss5, phone, imageurl, saved))
         .catch(err => console.log(err))
-        alert ( "doctor informaiton saved");
-        
+       // alert ( "Doctor saved");
+        this.setState({ info: 'Doctor saved!' });
     };
 
     render() {
         return (
-            <div  >
-                <Card cardTitle="Search for Doctors" cardContent={this.searchForm()}
+            <div>
+                <Card cardTitle="Search for Doctors"  cardContent={this.searchForm()} 
                 />
-               
+                <Message message={this.state.info} />
                 <div className ="cardDiv col s12 m10">
                 { this.state.doctors.length ? <Card cardTitle="Search Results" cardContent={this.searchResults()} /> : "" }
+                
                 </div>
+               
             </div>
+            
         );
     }
 };

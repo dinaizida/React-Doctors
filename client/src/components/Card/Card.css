@@ -4,7 +4,8 @@
 }
 
 .card:hover {
-	cursor: pointer;
+  cursor: pointer;
+  color: #1567b9;
 }
 .cardTitle{
   color: #b61c1c;
