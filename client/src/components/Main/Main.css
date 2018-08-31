@@ -27,7 +27,9 @@ h1 {
   h1{
     font-weight: bolder;
   }
-  
+  p {
+    color:#ECC26C;
+  }
 .site-main {
     background-image: url("/images/header.png");
     width: 100%;

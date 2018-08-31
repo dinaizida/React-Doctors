@@ -21,7 +21,24 @@ export default {
     // updates an Doctor to the database
     updateDoctor: function(doctorData) {
         return axios.put("/api/doctors", doctorData);
-    }
+    },
+        // Gets all notes
+        getNotes: function() {
+            return axios.get("/api/notes");
+        },
+        // Gets the note with the given id
+        getNote: function(id) {
+            return axios.get("/api/notes/" + id);
+        },
+        // Deletes the Note with the given id
+        deleteNote: function(id) {
+            return axios.delete("/api/notes/" + id);
+        },
+        // Saves a Note to the database
+        saveNote: function(noteData) {
+            return axios.post("/api/notes", noteData);
+        }
+
 };
 
  

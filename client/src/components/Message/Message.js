@@ -6,7 +6,7 @@ const Message = ({ message }) => (
     <div >
              
             <div  className='col m4 s12'>
-						<span  id = "msg" className ="btn pulse orange accent-1 message">{message}</span>
+						<span  className =" msg btn pulse orange accent-1 message">{message}</span>
 			</div>
             
         
