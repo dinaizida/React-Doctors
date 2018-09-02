@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
+import "./Detail.css";
+import Notes from "../../pages/Notes";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class Detail extends Component {
   state = {
     note: {}
   };
   // When this component mounts, grab the note with the _id of this.props.match.params.id
-  // e.g. localhost:3000/notes/599dcb67f0f16317844583fc
+  
   componentDidMount() {
     API.getNote(this.props.match.params.id)
       .then(res => this.setState({ note: res.data }))
@@ -18,32 +22,45 @@ class Detail extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <div class = "" >
+      <br></br>
+      <br></br>
+      
         <Row>
-          <Col size="md-12">
+          <Col size="m6 l6 s12">
             <Jumbotron>
-              <h1>
-                {this.state.note.title} is {this.state.note.specialties}
-              </h1>
+              <h4>
+                {this.state.note.title} for  {this.state.note.specialties}
+              </h4>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>My Notes</h1>
-              <p>
-                {this.state.note.mynote}
-              </p>
-            </article>
+          <Col size="m10 s12 ">
+           
+              <div class = "card">
+                <p class = "noteInfo" >
+                  {this.state.note.mynote}
+                </p>
+              </div>
+          
           </Col>
         </Row>
         <Row>
-          <Col size="md-2">
-            <Link to="/">← Back to My Notes List</Link>
+        <br></br>
+          <Col size="m2">
+
+            <span class = "btn-unsave waves-effect waves-light btn btn-large pulse   blue lighten-3"><Link to="/notes"> Back to My Notes List</Link></span>
           </Col>
         </Row>
-      </Container>
+        <div>
+                      <Route exact path="/notes" component={Notes} />
+                    
+                </div>
+                <br></br>
+                
+      
+      </div>
     );
   }
 }

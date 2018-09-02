@@ -1,0 +1,17 @@
+h4{
+    
+    color: #1567b9;
+    text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa
+}
+              
+.noteInfo{
+    color: #1567b9;
+    font-size: 1.3em;
+    padding: 20px;
+    margin: 20px;
+
+}

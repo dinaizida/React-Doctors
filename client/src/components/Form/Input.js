@@ -1,7 +1,8 @@
 import React from "react";
 
 export const Input = props => (
-  <div className="form-group">
-    <input className="form-control" {...props} />
+  <div style={{ height: 80, clear: "both", paddingTop: 10, textAlign: "center" }} 
+  >
+    <input style = {{textAlign: "center", textDecorationColor: "#1567b9"}}  {...props} />
   </div>
 );

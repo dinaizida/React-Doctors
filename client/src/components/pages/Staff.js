@@ -35,24 +35,27 @@ class Staff extends Component {
       <div>
         <br></br>
         <br></br>
-        <h1>Welcome {currentUserName}</h1>
+        <h2>Welcome {currentUserName}</h2>
         {/* <p>Email: {currentUserEmail}</p> */}
         {/* <p>Find and save doctors information</p> */}
+        <div className = "row">
+            <div id = "butn" className='col m6 s12'>
+              <span id ="drnt" className = "  btn-large hoverable  waves-effect waves-light btn blue lighten-3   " ><Link to="/saved"><i className="material-icons left tiny">bookmark_border</i> Your Saved Doctors</Link></span>
+            </div>
+           
+            <div id = "butn" className='col m6 s12'>
+              <span id ="drnt" className = " btn-large     hoverable waves-effect waves-light btn  blue lighten-3  " ><Link to="/notes"><i className="material-icons left tiny">bookmark_border</i> Your Saved Notes</Link></span>
+            </div>
+          </div>  
         
         <Main/>
-          <div id = "butn" className='col m4 s12'>
-            <span className = " msg  waves-effect waves-light btn orange accent-1 message " ><Link to="/saved"><i className="material-icons left tiny">bookmark_border</i> Your Saved Doctors</Link></span>
-          </div>
-          <br></br>
-          <div id = "butn" className='col m4 s12'>
-            <span className = " msg  waves-effect waves-light btn orange accent-1 message " ><Link to="/notes"><i className="material-icons left tiny">bookmark_border</i> Your Saved Notes</Link></span>
-          </div>  
+       
         <Search/>
               <div>
               
                 <div>
                   <Switch>
-                  {/* <Route exact path="/notes" component={Notes} /> */}
+                  
                   <Route exact path="/Saved" component={Saved} />
               
                       <Route exact path="/notes" component={Notes} />

@@ -7,4 +7,18 @@
     justify-content: space-around;
     align-content: flex-start;
   }
-  
+  @media (max-width: 375px) {
+   
+    h2{
+        font-size: 1.5em;
+    }
+    .site-main{
+        height: 200px;
+        margin-bottom: 20px;
+
+    }
+    .msg{
+        font-size: 0.6em;
+    }
+    
+}

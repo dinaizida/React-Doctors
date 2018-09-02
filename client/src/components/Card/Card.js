@@ -4,7 +4,7 @@ import "./Card.css";
 const Card = props => (
     <div className = "card">
         <div className="card-content card hoverable ">
-            <span className="card-title cardTitle">{props.cardTitle}</span>
+            <span id = "drTitle" className="card-title cardTitle">{props.cardTitle}</span>
             {props.cardContent}
             
         </div>

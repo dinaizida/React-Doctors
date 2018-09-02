@@ -134,7 +134,7 @@ class Search extends Component {
                 <Card cardTitle="Search for Doctors"  cardContent={this.searchForm()} 
                 />
                 <Message message={this.state.info} />
-                <div className ="cardDiv col s12 m10">
+                <div className ="cardDiv col s12 m3">
                 { this.state.doctors.length ? <Card cardTitle="Search Results" cardContent={this.searchResults()} /> : "" }
                 
                 </div>

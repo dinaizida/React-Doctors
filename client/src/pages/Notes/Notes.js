@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-
+import "./Notes.css";
 
 class Notes extends Component {
   state = {
@@ -60,14 +60,14 @@ class Notes extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Add Note</h1>
+              <h3>Add Your Note</h3>
             </Jumbotron>
             <form>
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
                 name="title"
-                placeholder="Your Doctor Name (required)"
+                placeholder="Note Title (required)"
               />
               <Input
                 value={this.state.specialties}
@@ -91,7 +91,7 @@ class Notes extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>My Notes List</h1>
+              <h3>My Notes List</h3>
             </Jumbotron>
             {this.state.notes.length ? (
               <List>
@@ -99,7 +99,7 @@ class Notes extends Component {
                   <ListItem key={note._id}>
                     <Link to={"/notes/" + note._id}>
                       <strong>
-                        {note.title} by {note.specialties}
+                        {note.title} for {note.specialties}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteNote(note._id)} />
