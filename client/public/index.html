@@ -11,6 +11,15 @@
     
     <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
     <title>Personal Doctors App</title>
+    <script>
+      window.addEventListener('message', function (event) {
+       if (event.origin === 'https://nameless-mesa-54963.herokuapp.okta.com/' &&
+             event.data &&
+             event.data.detected) {
+           document.getElementById('pluginVersion').innerHTML = event.data.pluginVersion;
+       }
+     });
+   </script>
   </head>
 
   <body>
@@ -22,6 +31,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
        
   
-  
+    Plugin Detected: <b><span id="pluginVersion"></span></b>
+    <iframe id="okta-frame"
+            style="display:none"
+            src="https://nameless-mesa-54963.herokuapp.okta.com/app/UserHome/plugin-info"
+            onload="this.contentWindow.postMessage('pluginVersion', 'https://nameless-mesa-54963.herokuapp.okta.com/app/UserHome/plugin-info')"/>
   </body>
 </html>
