@@ -1,25 +1,17 @@
-/* 
-#rootBack{
-   
-    background-image: url("docS.png");
-    width: 100%;
-    height: 600px;
-    margin-bottom: -200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-} */
+
 
 body{
-    background-image: url("docS.png");
+    background-image: url("docB.png");
     width: 100%;
-    height: 600px;
-    margin-bottom: -200px;
+    height: 800px;
+    /* margin-bottom: -200px; */ 
+    margin-bottom: 150px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
 }
+
 @media (max-width: 375px) {
    
     h1{

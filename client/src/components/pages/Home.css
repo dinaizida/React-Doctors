@@ -2,3 +2,27 @@
 .lead{
     color:#dd2c00;
 }
+
+#mainTitle{
+    color:#e57373;
+    font-size: 4em;
+}
+
+@media (max-width: 375px) {
+   
+    h1{
+        font-size: 2em;
+    }
+    #infoTitle{
+        font-size: 0.5em;
+    }
+    .site-main{
+        height: 200px;
+        margin-bottom: 20px;
+
+    }
+    #msg{
+        font-size: 0.6em;
+    }
+    
+}

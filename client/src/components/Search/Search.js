@@ -44,9 +44,7 @@ class Search extends Component {
         // form fields
         const topic = this.state.topic;
 
-        // API URL
-        //const apiKey = "932c328bab1a81634332edee178f5544";
-       //let queryURL = `https://api.betterdoctor.com/2016-03-01/doctors?query=" + ${topic} + "&location?query=" + ${doctorState} + "&user_location=30.1431%2C-97.8335&skip=0&sort=distance-asc&limit=10&user_key=932c328bab1a81634332edee178f5544`;
+        
        let queryURL = `https://api.betterdoctor.com/2016-03-01/doctors?query=" + ${topic} +  "&user_location=30.1431%2C-97.8335&skip=0&sort=distance-asc&limit=10&user_key=932c328bab1a81634332edee178f5544`;
         console.log(`queryURL: ${queryURL}`);
 

@@ -34,7 +34,11 @@ class App extends Component {
                             <div className="container">
                             <Route path="/" exact={true} component={Home} />
                             <SecureRoute path="/staff" exact={true} component={Staff} />
-                
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                           
                             <Route
                                 path="/login"
                                 render={() => (

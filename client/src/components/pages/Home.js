@@ -37,7 +37,7 @@ export default withAuth(
         <div>
           <p className="lead">
             {/* You have entered the user portal,{' '} */}
-            <span className="waves-effect waves-light btn btn-large pulse blue lighten-4"><Link to="/staff">Go to User Portal to veiw your Doctors information</Link></span>
+            <span id = 'infoTitle' className="waves-effect waves-light btn btn-large pulse blue lighten-4"><Link to="/staff">Click on User Portal to veiw your Doctors</Link></span>
           </p>
           <br></br>
         <br></br>
@@ -70,14 +70,24 @@ export default withAuth(
       );
 
       return (
-        <div className="jumbotron">
+        <div  className="jumbotron">
         <br></br>
         <br></br>
         <br></br>
-          <h1 className="display-4">My Doctors App</h1>
+        <br></br>
+        <br></br>
+        <br></br>
+          {/* <h1 id ="mainTitle" className="display-4">My Doctors App</h1> */}
+          <h1 id ="mainTitle" className="display-4"></h1>
+
           <br></br>
         <br></br>
         <br></br>
+        <div>
+        <br></br>
+        <br></br>
+        <br></br>
+        </div>
           {mainContent}
           <br></br>
         <br></br>
