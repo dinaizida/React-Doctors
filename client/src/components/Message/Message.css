@@ -1,3 +1,18 @@
 .msg {
    color: #1567b9;
 }
+@media (max-width: 375px) {
+   
+    h1{
+        font-size: 2em;
+    }
+    .site-main{
+        height: 200px;
+        margin-bottom: 20px;
+
+    }
+    .msg{
+        font-size: 0.6em;
+    }
+    
+}

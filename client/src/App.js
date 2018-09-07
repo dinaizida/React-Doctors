@@ -29,24 +29,12 @@ class App extends Component {
                     onAuthRequired={onAuthRequired}
                 > 
                     
-                    {/* <Main> */}
-                        {/* <Switch> */}
-                            {/* <Route exact path="/" component={Search} /> */}
-                            {/* <Route exact path="/Saved" component={Saved} /> */}
-                        {/* </Switch> */}
                         <div className="App">
                             <Navbar />
                             <div className="container">
                             <Route path="/" exact={true} component={Home} />
                             <SecureRoute path="/staff" exact={true} component={Staff} />
-                 {/* <Switch>
-                   
-                  <Route exact path="/Saved" component={Saved} />
-              
-                      <Route exact path="/notes" component={Notes} />
-                      <Route exact path="/notes/:id" component={Detail} />
-                      
-                  </Switch> */}
+                
                             <Route
                                 path="/login"
                                 render={() => (
@@ -57,8 +45,7 @@ class App extends Component {
                             </div>
                         </div>
 
-  {/* //*********************** */ }
-                    {/* </Main> */}
+ 
                 </Security>
             </Router>
         );

@@ -54,9 +54,9 @@ export default withAuth(
            <br></br>
         <br></br>
         <br></br>
-          <p className="lead waves-effect waves-light btn btn-large  orange accent-1">
+          {/* <p className="lead waves-effect waves-light btn btn-large  orange accent-1">
             Please enter your email and password to access User Portal
-          </p>
+          </p> */}
           <br></br>
         <br></br>
         <br></br>
@@ -74,7 +74,7 @@ export default withAuth(
         <br></br>
         <br></br>
         <br></br>
-          <h1 className="display-4">Your Doctors App</h1>
+          <h1 className="display-4">My Doctors App</h1>
           <br></br>
         <br></br>
         <br></br>
