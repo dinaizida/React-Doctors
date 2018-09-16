@@ -56,13 +56,14 @@ class Notes extends Component {
 
   render() {
     return (
-      <Container fluid>
+      
+      <Container fluid >
         <Row>
           <Col size="md-6">
             <Jumbotron>
               <h3>Add Your Note</h3>
             </Jumbotron>
-            <form>
+            <form >
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
@@ -82,14 +83,14 @@ class Notes extends Component {
                 placeholder="Your Note"
               />
               <FormBtn
-                disabled={!(this.state.specialties && this.state.title)}
+                // disabled={!(this.state.specialties && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
                 Save My Note
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
+          <Col size="md-6 sm-12 ">
             <Jumbotron>
               <h3>My Notes List</h3>
             </Jumbotron>
@@ -99,8 +100,8 @@ class Notes extends Component {
                   <ListItem key={note._id}>
                     <Link to={"/notes/" + note._id}>
                       <strong>
-                        {note.title} for {note.specialties}
-                      </strong>
+                        {note.title} for {note.specialties} &nbsp;&nbsp;&nbsp;
+                         </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteNote(note._id)} />
                   </ListItem>
@@ -112,6 +113,7 @@ class Notes extends Component {
           </Col>
         </Row>
       </Container>
+    
     );
   }
 }

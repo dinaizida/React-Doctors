@@ -48,10 +48,13 @@ class Detail extends Component {
         </Row>
         <Row>
         <br></br>
+        <br></br>
           <Col size="m2">
 
             <span class = "btn-unsave waves-effect waves-light btn btn-large pulse   blue lighten-3"><Link to="/notes"> Back to My Notes List</Link></span>
           </Col>
+          <br></br>
+          <br></br>
         </Row>
         <div>
                       <Route exact path="/notes" component={Notes} />

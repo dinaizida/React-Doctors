@@ -1,6 +1,5 @@
 h3{
-    
-    
+
         color: #1567b9;
         text-shadow: 0 1px 0 #ccc, 
                    0 2px 0 #c9c9c9,
@@ -9,3 +8,7 @@ h3{
                    0 5px 0 #aaa
    
 }
+
+/* #formText{
+        font-size: 1.5em;
+} */

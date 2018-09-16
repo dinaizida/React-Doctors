@@ -8,15 +8,40 @@
   color: #1567b9;
 }
 .cardTitle{
-  color: #b61c1c;
-  font-size: 1.3em;
+  color: #ef9a9a;
+  
   
   
 }
+#cardContent{
+  font-size: 1.5em;
+  
+}
+
 .cardDiv {
   margin: 20px auto;
   color: #1567b9;
+  
 }
 #drTitle{
-  font: bold;
+  font-weight: 700;
+  font-size: 2.1em;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  
+}
+@media (max-width: 375px) {
+   
+  #drTitle{
+  
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    
+    padding-top: 5px;
+  }
+  #cardContent{
+    font-size: 1.2em;
+    
+  }
+  
 }

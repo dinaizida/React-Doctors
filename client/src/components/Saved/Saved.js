@@ -48,7 +48,7 @@ class Saved extends Component {
         )
     };
 
-    // deletes an Doctor
+    // deletes a Doctor
     deleteDoctor = id => {
         API.deleteDoctor(id)
         .then(res => this.loadDoctors())
@@ -57,7 +57,7 @@ class Saved extends Component {
 
     render() {
         return (
-            <div>
+            <div >
                 { this.state.doctors.length ? <Card shadow={false} cardTitle="Saved Doctors" cardContent={this.savedDoctors()} /> : <Card cardTitle="No saved doctors to display" /> }
             </div>
         );
