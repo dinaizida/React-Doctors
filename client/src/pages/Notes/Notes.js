@@ -59,7 +59,9 @@ class Notes extends Component {
       
       <Container fluid >
         <Row>
+        
           <Col size="md-6">
+         
             <Jumbotron>
               <h3>Add Your Note</h3>
             </Jumbotron>
@@ -74,7 +76,7 @@ class Notes extends Component {
                 value={this.state.specialties}
                 onChange={this.handleInputChange}
                 name="specialties"
-                placeholder="Your Doctor's specialty"
+                placeholder="Your Doctor's specialty or name"
               />
               <TextArea
                 value={this.state.mynote}
@@ -100,7 +102,7 @@ class Notes extends Component {
                   <ListItem key={note._id}>
                     <Link to={"/notes/" + note._id}>
                       <strong>
-                        {note.title} for {note.specialties} &nbsp;&nbsp;&nbsp;
+                        {note.title} with {note.specialties} &nbsp;&nbsp;&nbsp;
                          </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteNote(note._id)} />
@@ -108,7 +110,7 @@ class Notes extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>No Notes to Display</h3>
             )}
           </Col>
         </Row>

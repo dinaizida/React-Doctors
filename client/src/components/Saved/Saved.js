@@ -58,7 +58,8 @@ class Saved extends Component {
     render() {
         return (
             <div >
-                { this.state.doctors.length ? <Card shadow={false} cardTitle="Saved Doctors" cardContent={this.savedDoctors()} /> : <Card cardTitle="No saved doctors to display" /> }
+                <h3>Saved Doctors</h3>
+                { this.state.doctors.length ? <Card shadow={false}  cardContent={this.savedDoctors()} /> : <Card cardTitle="No saved doctors to display" /> }
             </div>
         );
     };

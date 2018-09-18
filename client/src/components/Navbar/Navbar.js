@@ -13,13 +13,13 @@ const Navbar = () => (
                 
                 
               <div id = "butn" className='col m3 s6'>
-                <span className = " menuBtn waves-effect waves-light btn-small buttonColor " ><Link  to="/">
+                <span className = " menuBtn waves-effect waves-light btn-small buttonColor " ><Link  to="/"><i className="material-icons left medium">home</i>
                   Home
                 </Link></span>
                 </div>
               
               <div id = "butn" className='col m3 s6'>
-              <span className = " menuBtn waves-effect waves-light btn-small buttonColor " ><Link  to="/staff">
+              <span className = " menuBtn waves-effect waves-light btn-small buttonColor " ><Link  to="/staff"><i className="material-icons left medium">perm_identity</i>
                   User Portal
                  </Link></span>
                  </div>

@@ -46,7 +46,7 @@ class Detail extends Component {
           
           </Col>
         </Row>
-        <Row>
+        <div>
         <br></br>
         <br></br>
           <Col size="m2">
@@ -55,7 +55,7 @@ class Detail extends Component {
           </Col>
           <br></br>
           <br></br>
-        </Row>
+        </div>
         <div>
                       <Route exact path="/notes" component={Notes} />
                     

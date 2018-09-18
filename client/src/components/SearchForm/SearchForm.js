@@ -4,9 +4,9 @@ const SearchForm = props => (
     <form>
         <div className="row ">
         
-            <div className="input-field col m10 s10 ">
+            <div className="input-field col m12 s12 ">
                 <input id="topic" name="topic" type="text"   value={props.topic} onChange={props.handleInputChange} required />
-                <label htmlFor="topic">Medical Issue</label>
+                <label htmlFor="topic">Type your Medical Issue</label>
             </div>
             
         </div>

@@ -12,7 +12,7 @@ class Search extends Component {
     state = {
         doctors: [],
         topic: "",
-        info: 'click on "search" button to find a doctor',
+        info: 'use "search" to find a doctor',
         
     };
     
@@ -129,13 +129,22 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <Card cardTitle="Search for Doctors"  cardContent={this.searchForm()} 
+                 <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                
+                <Card   cardContent={this.searchForm()} 
                 />
                 <Message message={this.state.info} />
                 <div className ="cardDiv col s12 m3">
                 { this.state.doctors.length ? <Card cardTitle="Search Results" cardContent={this.searchResults()} /> : "" }
                 
                 </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                
             </div>
             
