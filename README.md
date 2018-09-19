@@ -19,5 +19,11 @@ The app uses React components, React Router, and the React mounting lifecycle to
 
 React, React Router, Okta, Node, Express, Axios, Mongoose, Materialize, Affinity Photo. 
 
-
+![Screen Shot](/client/public/images/screen1.png)
+![Screen Shot](/client/public/images/screen2.png)
+![Screen Shot](/client/public/images/screen3.png)
+![Screen Shot](/client/public/images/screen4.png)
+![Screen Shot](/client/public/images/screen5.png)
+![Screen Shot](/client/public/images/screen6.png)
+![Screen Shot](/client/public/images/screen7.png)
 ![Screen Shot](/client/public/images/doctor.gif)
