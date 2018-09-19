@@ -9,7 +9,7 @@ The app uses React components, React Router, and the React mounting lifecycle to
 
 
 
-* User can store your personal medical information
+* User can store personal medical information
 * User can give access to personal information using Okta - identity management application
 * User would be able to find a doctor, save or delete their contact information in the database
 * User would be able to create and save or delete personal medical informaiton.
